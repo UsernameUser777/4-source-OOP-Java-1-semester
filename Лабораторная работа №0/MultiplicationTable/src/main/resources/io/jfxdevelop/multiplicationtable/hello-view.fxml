@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="485.0" prefWidth="487.0" spacing="20.0"
+      xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/17.0.12"
+      fx:controller="io.jfxdevelop.multiplicationtable.HelloController">
+
+    <padding>
+        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+    </padding>
+
+    <TextField fx:id="tf"/>
+
+    <Label fx:id="l">
+        <font>
+            <Font name="System Bold" size="36.0"/>
+        </font>
+    </Label>
+
+    <Button fx:id="checkButton" text="Проверить" onAction="#onHelloButtonClick"/>
+
+</VBox>
