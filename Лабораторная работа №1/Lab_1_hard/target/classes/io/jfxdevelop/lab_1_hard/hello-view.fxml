@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="15.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="io.jfxdevelop.lab_1_hard.HelloController">
+    <padding>
+        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+    </padding>
+
+    <Label text="Введите целое число:"/>
+    <TextField fx:id="inputField" promptText="Например, 12"/>
+    <Button text="Показать делители" onAction="#onShowDivisorsClick"/>
+    <Label fx:id="resultLabel" wrapText="true"/>
+</VBox>
