@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="io.jfxdevelop.lab_5_hard.HelloController"
+      spacing="10" alignment="CENTER">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <TextField fx:id="input1" promptText="Число 1"/>
+    <TextField fx:id="input2" promptText="Число 2"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="+" onAction="#handleAdd"/>
+        <Button text="−" onAction="#handleSubtract"/>
+        <Button text="×" onAction="#handleMultiply"/>
+        <Button text="÷" onAction="#handleDivide"/>
+    </HBox>
+
+    <Button text="Очистить поля" onAction="#handleClear"/>
+    <Label fx:id="resultLabel" text="Результат будет здесь"/>
+
+    <Label text="История операций:"/>
+    <TextArea fx:id="historyArea" prefRowCount="6" editable="false" wrapText="true"/>
+    <Button text="Очистить историю" onAction="#handleClearHistory"/>
+</VBox>
