@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="io.jfxdevelop.lab_6_hard.HelloController"
+            prefWidth="900" prefHeight="600">
+
+    <center>
+        <SplitPane dividerPositions="0.5">
+            <items>
+                <!-- Left: Students -->
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                    <Label text="Студенты"/>
+                    <TableView fx:id="studentsTable" prefHeight="300">
+                        <columns>
+                            <TableColumn fx:id="studentNameCol" text="Имя" prefWidth="150"/>
+                            <TableColumn fx:id="studentAgeCol" text="Возраст" prefWidth="100"/>
+                        </columns>
+                    </TableView>
+
+                    <HBox spacing="10">
+                        <TextField fx:id="studentNameField" promptText="Имя"/>
+                        <TextField fx:id="studentAgeField" promptText="Возраст"/>
+                        <Button fx:id="addStudentBtn" text="Добавить" onAction="#onAddStudent"/>
+                        <Button fx:id="deleteStudentBtn" text="Удалить" onAction="#onDeleteStudent"/>
+                    </HBox>
+                </VBox>
+
+                <!-- Right: Courses -->
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                    <Label text="Курсы"/>
+                    <TableView fx:id="coursesTable" prefHeight="300">
+                        <columns>
+                            <TableColumn fx:id="courseTitleCol" text="Название" prefWidth="200"/>
+                            <TableColumn fx:id="courseCreditsCol" text="Кредиты" prefWidth="100"/>
+                        </columns>
+                    </TableView>
+
+                    <HBox spacing="10">
+                        <TextField fx:id="courseTitleField" promptText="Название"/>
+                        <TextField fx:id="courseCreditsField" promptText="Кредиты"/>
+                        <Button fx:id="addCourseBtn" text="Добавить" onAction="#onAddCourse"/>
+                        <Button fx:id="deleteCourseBtn" text="Удалить" onAction="#onDeleteCourse"/>
+                    </HBox>
+                </VBox>
+            </items>
+        </SplitPane>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button fx:id="enrollBtn" text="Записать студента на курс" onAction="#onEnroll"/>
+            <Button fx:id="unenrollBtn" text="Отписать студента от курса" onAction="#onUnenroll"/>
+        </HBox>
+    </bottom>
+</BorderPane>
